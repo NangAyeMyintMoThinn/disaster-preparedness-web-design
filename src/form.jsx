@@ -5,39 +5,39 @@ function Form() {
   const [formData, setFormData] = useState({
     email: '',
     username: '',
-    imageUrl: '', // URL from the API
-    imageFile: null, // File object for upload
+    selectedImage: null, // Selected image from API
   });
 
-  const [errors, setErrors] = useState({});
+  const [images, setImages] = useState([]); // List of images from API
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
 
-  // Fetch image from API (example API)
-  const fetchImage = async () => {
+  // Fetch images from API
+  const fetchImages = async () => {
     setLoading(true);
     try {
-      const response = await fetch('https://picsum.photos/200/300'); // Example API
-      if (!response.ok) throw new Error('Failed to fetch image');
-      const imageUrl = response.url;
-      setFormData((prev) => ({ ...prev, imageUrl }));
+      const response = await fetch('https://picsum.photos/v2/list?limit=10'); // Example API
+      if (!response.ok) throw new Error('Failed to fetch images');
+      const data = await response.json();
+      setImages(data); // Store fetched images
     } catch (error) {
-      setErrors({ ...errors, image: 'Failed to load image from API' });
+      setErrors({ ...errors, api: 'Failed to load images from API' });
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    fetchImage(); // Fetch image on component mount
+    fetchImages(); // Fetch images on component mount
   }, []);
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === 'imageFile') {
-      setFormData({ ...formData, [name]: files[0] });
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleImageSelect = (image) => {
+    setFormData({ ...formData, selectedImage: image });
   };
 
   const validateForm = () => {
@@ -50,8 +50,8 @@ function Form() {
     if (!formData.username) {
       newErrors.username = 'Username is required';
     }
-    if (!formData.imageFile) {
-      newErrors.imageFile = 'Please upload an image';
+    if (!formData.selectedImage) {
+      newErrors.image = 'Please select an image';
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -96,29 +96,44 @@ function Form() {
         </div>
 
         <div className="form-group">
-          <label>Image from API</label>
+          <label>Select Image from API</label>
           {loading ? (
-            <div className="loading">Loading image...</div>
+            <div className="loading">Loading images...</div>
+          ) : errors.api ? (
+            <div className="error-message">{errors.api}</div>
           ) : (
-            <img
-              src={formData.imageUrl}
-              alt="Fetched from API"
-              className="api-image"
-            />
+            <div className="image-grid">
+              {images.map((image) => (
+                <div
+                  key={image.id}
+                  className={`image-item ${
+                    formData.selectedImage?.id === image.id ? 'selected' : ''
+                  }`}
+                  onClick={() => handleImageSelect(image)}
+                >
+                  <img
+                    src={image.download_url}
+                    alt={`From API - ${image.author}`}
+                    className="thumbnail"
+                  />
+                </div>
+              ))}
+            </div>
           )}
           {errors.image && <span className="error-message">{errors.image}</span>}
         </div>
 
         <div className="form-group">
-          <label>Upload Your Image</label>
-          <input
-            type="file"
-            name="imageFile"
-            onChange={handleChange}
-            className={errors.imageFile ? 'error' : ''}
-            accept="image/*"
-          />
-          {errors.imageFile && <span className="error-message">{errors.imageFile}</span>}
+          <label>Selected Image</label>
+          {formData.selectedImage ? (
+            <img
+              src={formData.selectedImage.download_url}
+              alt="Selected"
+              className="selected-image"
+            />
+          ) : (
+            <div className="placeholder">No image selected</div>
+          )}
         </div>
 
         <button type="submit" className="submit-btn" disabled={loading}>
