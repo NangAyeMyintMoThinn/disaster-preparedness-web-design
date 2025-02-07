@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="map">
+            <iframe class="gMap" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d62981635.912042536!2d115.76069829699031!3d15.533091374039703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smm!4v1738754610150!5m2!1sen!2smm" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> -->
+        <div class="map" id="map"></div>
+        <div class="forecasting">
+            <div class="city">
+                <h1 id="cityName" class="cName">City Name</h1> 
+                <p class="location" id="locationInfo">
+                    Myanmar / Lat.: <span id="latitude">22&deg;0'N</span> / Lon.: <span id="longitude">96&deg;4'E</span> / 
+                    Altitude: <span id="altitude">253 ft</span> <br>
+                    Timezone: <span id="timezone">Asia/Rangoon</span> (UTC+6) / Current time: <span id="currentTime">08:56 PM 01/16/2025</span>
+                </p>
+            </div>
+            <div class="prediction">
+                <h5 class="currentTitle">CURRENT WEATHER</h5> <hr>
+                <div class="weatherSection">
+                    <div class="weatherIcon">
+                        <img id="weatherIcon" src="">
+                    </div>
+                    <div class="temperature">
+                        <div id="temperature" class="temp">12&deg;F</div>
+                        <div id="windSpeed" class="wind"> Wind -- <strong>0 mph</strong></div>
+                    </div>
+                    <div class="predictSection">
+                        <p>
+                            Precipitation (12 hr.)<br>
+                            Air pressure<br>
+                            Visibility<br>
+                            Clouds<br>
+                            Cloud base
+                        </p>
+                        <p class="bold">
+                            <span id="precipitation"></span> <br> 
+                            <span id="pressure"></span> <br>
+                            <span id="visibility"></span> <br>
+                            <span id="clouds"></span> <br>
+                            <span id="cloudBase"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="weatherOverview">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sunt?
+                </div>
+            </div>
+            <div class="hourly">
+                <h5 class="currentTitle">
+                    WEATHER FOR THE NEXT 24 HOURS
+                </h5> 
+                <div class="timely" id="hourlyForecast">
+                    <!-- <div class="group">
+                        <div class="hour">
+                            09 PM
+                        </div>
+                        <div class="situationImg">
+                            <img src="./images/cloud-37010_1280.webp">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=49a946a143ae2de332f742f80150732e&callback=initMap"></script>
+</html>

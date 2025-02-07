@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+.container .map{
+    width: 50%;
+}
+.container .gMap{
+    width: 100%;
+    height: 100vh;
+}
+.container .forecasting{
+    width: 50%;
+}
+.forecasting .city{
+    padding: 20px;
+}
+.forecasting .cName{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.forecasting .prediction{
+    padding: 20px;
+    margin-bottom: 5px;
+}
+.currentTitle{
+    margin: 20px 0 20px 0;
+    color: blue;
+}
+hr{
+    width: 100%;
+    border: 1px solid rgb(202, 202, 202);
+    margin: auto;
+}
+.prediction .weatherSection{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 0px;
+    margin-top: 20px;
+}
+.weatherIcon{
+    margin: 0px;
+}
+.prediction .weatherIcon img{
+    width: 100px;
+    height: auto;
+}
+.weatherSection .temperature{
+    align-items: center;
+}
+.temperature .temp{
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+.temperature .wind{
+    font-size: 12px;
+}
+.weatherSection .predictSection{
+    background-color: white;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    line-height: 20px;
+}
+.predictSection .bold{
+    text-align: end;
+    font-weight: bold;
+}
+.hourly{
+    padding: 20px;
+    height: 252px;
+    background-color: rgb(218, 215, 215);
+}
+.hourly .currentTitle{
+    color: darkblue;
+    text-align: start;
+}
+.hourly .timely {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding: 10px;
+}
+.timely .group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    min-width: 70px;
+    text-align: center;
+}
+.group .hour{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.timely .situationImg img{
+    width: 50px;
+    height: auto;
+}
+
+.hourlyTemp {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
