@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <!--    Start Navbar -->
+            <nav class="navbar navbar-expand-md fixed-top">
+                <div class="container-fluid">
+                <a class="navbar-brand h1 fs-4 text-white" href="#" >Rescue Kit</a>
+    
+                <button type="button" class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse justify-content-end text-uppercase fw-bold" id="nav">
+                    <ul class="navbar-nav fs-6" >
+                        <li class="nav-item"><a href="#" class="nav-link actives" >Home</a></li>
+    
+                        <li class="nav-item dropdown">
+                            <a href="#"  class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Update</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">Weather Forecast</a></li>
+                                <li><a href="#" class="dropdown-item">News</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Preparedness</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">Survival Tips</a></li>
+                                <li><a href="#" class="dropdown-item">Training & Certification</a></li>
+                                <li><a href="#" class="dropdown-item">Supplies Shops</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white">History</a>
+                        </li>
+    
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Rescue teams</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">Organization</a></li>
+                                <li><a href="#" class="dropdown-item">Volunteer</a></li>
+                                <li><a href="#" class="dropdown-item">Donation</a></li>
+                                <li><a href="#" class="dropdown-item">SOS</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        <!--    End Navbar -->
+        </header>
+    <div class="container1">
+        <!-- <div class="map">
+            <iframe class="gMap" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d62981635.912042536!2d115.76069829699031!3d15.533091374039703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smm!4v1738754610150!5m2!1sen!2smm" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> -->
+        <div class="map" id="map"></div>
+        <div class="forecasting">
+            <div class="city">
+                <h1 id="cityName" class="cName">City Name</h1> 
+                <p class="location" id="locationInfo">
+                    Myanmar / Lat.: <span id="latitude">22&deg;0'N</span> / Lon.: <span id="longitude">96&deg;4'E</span> / 
+                    Altitude: <span id="altitude">253 ft</span> <br>
+                    Timezone: <span id="timezone">Asia/Rangoon</span> (UTC+6) / Current time: <span id="currentTime">08:56 PM 01/16/2025</span>
+                </p>
+            </div>
+            <div class="prediction">
+                <h5 class="currentTitle">CURRENT WEATHER</h5> <hr>
+                <div class="weatherSection">
+                    <div class="weatherIcon">
+                        <img id="weatherIcon" src="">
+                    </div>
+                    <div class="temperature">
+                        <div id="temperature" class="temp">12&deg;F</div>
+                        <div id="windSpeed" class="wind"> Wind -- <strong>0 mph</strong></div>
+                    </div>
+                    <div class="predictSection">
+                        <p>
+                            Precipitation (12 hr.)<br>
+                            Air pressure<br>
+                            Visibility<br>
+                            Clouds<br>
+                            Cloud base
+                        </p>
+                        <p class="bold">
+                            <span id="precipitation"></span> <br> 
+                            <span id="pressure"></span> <br>
+                            <span id="visibility"></span> <br>
+                            <span id="clouds"></span> <br>
+                            <span id="cloudBase"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="weatherOverview">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sunt?
+                </div>
+            </div>
+            <div class="hourly">
+                <h5 class="currentTitle">
+                    WEATHER FOR THE NEXT 24 HOURS
+                </h5> 
+                <div class="timely" id="hourlyForecast">
+                    <!-- <div class="group">
+                        <div class="hour">
+                            09 PM
+                        </div>
+                        <div class="situationImg">
+                            <img src="./images/cloud-37010_1280.webp">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>We provide high-quality rescue kits designed for emergencies, ensuring safety and preparedness for everyone.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Shop</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <p class="mb-0">&copy; 2024 Rescue Kit Co. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+<script src="./script.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBHk7wCcchDDhF_W7XOMNbXr7IFSUN_HQ&callback=initMap"></script>
+</html>
