@@ -1,5 +1,8 @@
 import React from "react";
 import "./HistoryPage.css";
+import MainHeader from "../components/MainHeader";
+import MainFooter from '../components/MainFooter';
+
 
 const disasterData = [
   {
@@ -41,58 +44,7 @@ const disasterData = [
 const HistoryPage = () => {
   return (
     <div className="history-page">
-     {/* Start Navbar */}
-<nav class="navbar navbar-expand-md fixed-top">
-    <div class="container-fluid">
-    <a class="navbar-brand h1 fs-4 text-white" href="#" >Rescue Kit</a>
-
-    <button type="button" class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#nav">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end text-uppercase fw-bold" id="nav">
-        <ul class="navbar-nav fs-6" >
-            <li class="nav-item"><a href="#" class="nav-link  text-white" >Home</a></li>
-
-            <li class="nav-item dropdown">
-                <a href="#"  class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Update</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">Weather Forecast</a></li>
-                    <li><a href="#" class="dropdown-item">News</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Preparedness</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">Survival Tips</a></li>
-                    <li><a href="#" class="dropdown-item">Training & Certification</a></li>
-                    <li><a href="#" class="dropdown-item">Supplies Shops</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item">
-                <a href="#" class="nav-link actives">History</a>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Rescue teams</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">Organization</a></li>
-                    <li><a href="#" class="dropdown-item">Volunteer</a></li>
-                    <li><a href="#" class="dropdown-item">Donation</a></li>
-                    <li><a href="#" class="dropdown-item">SOS</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">About Us</a>
-            </li>
-        </ul>
-    </div>
-    </div>
-</nav>
-{/* End Navbar */}
+    <MainHeader/>
 
       {/* Disaster Section */}
       <section className="disaster-section">
@@ -130,34 +82,7 @@ const HistoryPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer class="bg-dark text-white text-center mt-5 py-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h5>About Us</h5>
-                <p>We provide high-quality rescue kits designed for emergencies, ensuring safety and preparedness for everyone.</p>
-            </div>
-            <div class="col-md-4">
-                <h5>Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">Shop</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h5>Follow Us</h5>
-                <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <hr class="bg-light"/>
-        <p class="mb-0">&copy; 2024 Rescue Kit Co. All Rights Reserved.</p>
-    </div>
-</footer>
+      <MainFooter/>
     </div>
   );
 };

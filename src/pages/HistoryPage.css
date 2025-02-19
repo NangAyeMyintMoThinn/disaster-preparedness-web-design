@@ -1,26 +1,13 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
 :root {
     --primary-color: #6BAED6;
 }
-
-/* Start Navbar */
-.navbar {
-    background: var(--primary-color);
-    padding: 20px 20px;
-}
-
-.nav-link.actives {
-    color: #000;
-}
-
-.navbar-nav .nav-item .nav-link {
-    transition: transform 0.3s;
-}
-
-.navbar-nav .nav-item:hover .nav-link {
-    transform: scale(1.05); /* Slightly enlarges the item */
-}
-
-/* End Navbar */
 .history-page {
     font-family: Poppins, sans-serif;
     color: #fff;
@@ -32,7 +19,7 @@
 
 /* Disaster Sections */
 .disaster-section {
-    margin: 48.6px auto auto auto;
+    margin: 61px auto auto auto;
     display: flex;
     flex-direction: column;
     gap: 60px;
