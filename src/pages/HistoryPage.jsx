@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import "./HistoryPage.css";
 import MainHeader from "../components/MainHeader";
