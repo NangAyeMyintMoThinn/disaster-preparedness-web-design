@@ -23,7 +23,7 @@ export default function MainHeader() {
                     <NavLink to="/weather" className={({ isActive }) => `dropdown-item ${isActive ? "active-link" : ""}`}>Weather Forecast</NavLink>
                   </li>
                   <li>
-                    <NavLink to="#" className={({ isActive }) => `dropdown-item ${isActive ? "active-link" : ""}`}>News</NavLink>
+                    <NavLink to="/news" className={({ isActive }) => `dropdown-item ${isActive ? "active-link" : ""}`}>News</NavLink>
                   </li>
                 </ul>
               </li>
@@ -34,21 +34,21 @@ export default function MainHeader() {
                 <NavLink to="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Rescue teams</NavLink>
                 <ul className="dropdown-menu">
                   <li>
-                    <NavLink to="#" className={({ isActive }) => `dropdown-item ${isActive ? "active-link" : ""}`}>Organization</NavLink>
+                    <NavLink to="/org" className={({ isActive }) => `dropdown-item ${isActive ? "active-link" : ""}`}>Organization</NavLink>
                   </li>
                   <li>
-                    <NavLink to="#" className={({ isActive }) => `dropdown-item ${isActive ? "active-link" : ""}`}>Volunteer</NavLink>
+                    <NavLink to="/volunteer" className={({ isActive }) => `dropdown-item ${isActive ? "active-link" : ""}`}>Volunteer</NavLink>
                   </li>
                   <li>
-                    <NavLink to="#" className={({ isActive }) => `dropdown-item ${isActive ? "active-link" : ""}`}>Donation</NavLink>
+                    <NavLink to="/donation" className={({ isActive }) => `dropdown-item ${isActive ? "active-link" : ""}`}>Donation</NavLink>
                   </li>
                   <li>
-                    <NavLink nto="#" className={({ isActive }) => `dropdown-item ${isActive ? "active-link" : ""}`}>SOS</NavLink>
+                    <NavLink to="/sos" className={({ isActive }) => `dropdown-item ${isActive ? "active-link" : ""}`}>SOS</NavLink>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <NavLink to="/weather" className={({ isActive }) => `nav-link ${isActive ? "active-link" : ""}`}>About Us</NavLink>
+                <NavLink to="/about-us" className={({ isActive }) => `nav-link ${isActive ? "active-link" : ""}`}>About Us</NavLink>
               </li>
             </ul>
           </div>
