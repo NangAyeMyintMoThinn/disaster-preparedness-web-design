@@ -8,86 +8,61 @@ export default function AboutUsPage() {
   return (
     <>
       <MainHeader/>
-      <div className="container-fluid about-section">
-      {/* Header Section */}
-      <header className="bg-dark text-white text-center p-5">
-        <div className="mt-5">
-          <h2 className="display-4">About Us</h2>
-          <p className="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum eveniet illo reprehenderit asperiores alias cupiditate nesciunt esse maxime! Asperiores, officiis autem earum nemo blanditiis provident? Voluptate deserunt nisi iure sed assumenda hic perferendis asperiores quis velit. Sequi accusantium laborum quam mollitia commodi impedit voluptas fugiat, ad voluptatibus deleniti. Iure odit, quaerat eveniet nulla laudantium vero porro blanditiis minus obcaecati vel.</p>
-          <button className="btn btn-primary mt-3">Register</button>
-        </div>
-      </header>
+      <div className="container py-5 about-section">
+        <h1 className="text-center mb-4">About Us</h1>
+        <p className="lead text-center">At Disaster Preparedness Myanmar (CU-MDY), we are committed to building a safer, more resilient future for the people of Myanmar.</p>
 
-      {/* Advantages Section */}
-      <section className="bg-light py-5">
-        <h2 className="text-center mb-4">Advantages</h2>
-        <div className="row text-center">
-          <div className="col-md-3">
-            <div className="card p-3">
-                <img src="/images/cyclone/1.jpg" alt="" />
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="card p-3">
-            <img src="/images/cyclone/1.jpg" alt="" />
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="card p-3">
-            <img src="/images/cyclone/1.jpg" alt="" />
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="card p-3">
-            <img src="/images/cyclone/1.jpg" alt="" />
-            </div>
-          </div>
+        <div className="text-center mb-4">
+          <img src="/images/disaster-preparedness-banner.jpg" alt="Disaster Preparedness" className="banner-image" />
         </div>
-      </section>
 
-      {/* Value Proposition Section */}
-      <section className="py-5">
-        <h2 className="text-center mb-4">Value Proposition</h2>
-        <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <div className="row mt-4">
-          <div className="col-md-6">
-            <h3>Item One</h3>
-            <p>Description</p>
-            <h3 className="mt-3">Item Two</h3>
-            <p>Description</p>
-          </div>
-          <div className="col-md-6">
-            <div className="card p-3">Image</div>
+        <div className="card shadow-sm border-0 mb-4">
+          <div className="card-body">
+            <h2 className="h4">Who We Are</h2>
+            <p>Disaster Preparedness Myanmar is a collaborative initiative designed to create a comprehensive disaster preparedness platform tailored to the unique challenges Myanmar faces.</p>
+            <div className="text-center mb-4">
+            <img src="/images/team-collaboration.jpg" alt="Team Collaboration" className="content-image" />
+            </div>
           </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="bg-dark text-white py-5">
-        <h2 className="text-center mb-4">Features</h2>
-        <p className="text-center">There are many variations of passages of Lorem Ipsum...</p>
-        <div className="row mt-4">
-          <div className="col-md-4">
-            <div className="card bg-secondary text-white p-3">Item One</div>
-          </div>
-          <div className="col-md-4">
-            <div className="card bg-secondary text-white p-3">Item Two</div>
-          </div>
-          <div className="col-md-4">
-            <div className="card bg-secondary text-white p-3">Item Three</div>
-          </div>
-          <div className="col-md-4">
-            <div className="card bg-secondary text-white p-3">Item Four</div>
-          </div>
-          <div className="col-md-4">
-            <div className="card bg-secondary text-white p-3">Item Five</div>
-          </div>
-          <div className="col-md-4">
-            <div className="card bg-secondary text-white p-3">Item Six</div>
+        <div className="card shadow-sm border-0 mb-4">
+          <div className="card-body">
+            <h2 className="h4">Our Vision</h2>
+            <p>To significantly reduce the loss of life and property by providing accessible, timely, and practical disaster preparedness solutions for individuals and communities across Myanmar.</p>
+            <div className="text-center mb-4">
+            <img src="/images/vision.jfif" alt="Our Vision" className="content-image" />
+            </div>
           </div>
         </div>
-      </section>
-    </div>
+
+        <div className="card shadow-sm border-0 mb-4">
+          <div className="card-body">
+            <h2 className="h4">Our Mission</h2>
+            <ul>
+              <li>Develop an innovative, user-friendly web and mobile application that delivers critical disaster-related information.</li>
+              <li>Provide real-time weather updates, evacuation plans, first aid instructions, and emergency contact databases.</li>
+              <li>Facilitate real-time communication and information sharing among community members during emergencies.</li>
+              <li>Promote education and awareness through interactive learning modules and comprehensive preparedness guidelines.</li>
+              <li>Support disaster-affected communities with funding and donation channels.</li>
+            </ul>
+            <div className="text-center mb-4">
+            <img src="/images/emergency-response.png" alt="Emergency Response" className="content-image" />
+            </div>
+          </div>
+        </div>
+
+        <div className="card shadow-sm border-0 mb-4">
+          <div className="card-body">
+            <h2 className="h4">Join Us</h2>
+            <p>Whether you're a developer, a volunteer, or someone passionate about disaster preparedness, there are many ways to get involved. Together, we can build stronger, safer communities prepared for whatever challenges may come.</p>
+            <p>For more information or to support our mission, feel free to reach out to us through our <a href="/contact" className="text-decoration-none">Contact Us</a> page. Let’s work together to make a difference!</p>
+            <div className="text-center mb-4">
+            <img src="/images/community-support.jfif" alt="Community Support" className="content-image" />
+            </div>
+          </div>
+        </div>
+      </div>
       <MainFooter/>
 
       </>
