@@ -1,0 +1,27 @@
+
+:root{
+    --primary-color: #6BAED6;
+}
+/*Start Navbar */
+.navbar{
+    background: var(--primary-color);
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    transform: scale(1.1); /* Slightly enlarges the item */
+}
+
+/*End Navbar*/
+
+/* Active link styling */
+.nav-link.active-link, 
+.dropdown-item.active-link {
+    color: #ff5e00bb !important;
+    font-weight: bold;
+}
+
