@@ -15,29 +15,25 @@
     display: flex;
     margin: 61px auto auto auto;
 }
-.container1 .map{
+.container1 .map {
     width: 50%;
-}
-.container1 .gMap{
-    width: 100%;
-    height: 100vh;
 }
 .container1 .forecasting{
     width: 50%;
 }
 .forecasting .city{
-    padding: 20px;
+    padding: 5px 20px;
 }
 .forecasting .cName{
     font-size: 40px;
     margin-bottom: 15px;
 }
 .forecasting .prediction{
-    padding: 20px;
+    padding: 5px 20px;
     margin-bottom: 5px;
 }
 .currentTitle{
-    margin: 20px 0 20px 0;
+    margin: 10px 0px;
     color: blue;
 }
 hr{
@@ -48,7 +44,7 @@ hr{
 .prediction .weatherSection{
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px 10px 0px;
+    padding: 5px 20px 10px 0px;
     margin-top: 20px;
 }
 .weatherIcon{
@@ -80,7 +76,7 @@ hr{
     font-weight: bold;
 }
 .hourly{
-    padding: 20px;
+    padding: 5px 20px;
     height: 252px;
     background-color: rgb(218, 215, 215);
 }
